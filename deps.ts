@@ -2,5 +2,15 @@
 import React from "https://esm.sh/react?dts";
 import ReactDOM from "https://esm.sh/react-dom?dts";
 import ReactDOMServer from "https://esm.sh/react-dom/server?dts";
+import styled from "https://esm.sh/styled-components@5.3.0?dts";
 
-export { React, ReactDOM, ReactDOMServer };
+export { React, ReactDOM, ReactDOMServer, styled };
+
+// Third Party Deno Modules.
+export {
+  Application,
+  Router,
+  send,
+} from "https://deno.land/x/oak@v7.7.0/mod.ts";
+
+// First Party (Official) Libraries
