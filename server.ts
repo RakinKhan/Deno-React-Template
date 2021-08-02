@@ -1,12 +1,13 @@
 import { Application, Router, send } from "./deps.ts";
-
+import indexPage from "./public/index.tsx";
 const app = new Application();
 const port = 8000;
 
 const router = new Router();
 
 router.get("/", (ctx) => {
-  ctx.response.body = "text/html";
+  ctx.response.type = "text/html";
+  indexPage(ctx);
 });
 
 app.use(router.routes());
@@ -19,6 +20,7 @@ app.use(async (ctx) => {
 });
 
 if (import.meta.main) {
+  console.log("The server is running on localhost:8000");
   await app.listen({
     port: port,
   });
