@@ -32,6 +32,27 @@ deno run --allow-net deps.ts
 denon start
 ```
 >**NOTE:** Denon will reload the server when any changes happen but the browser wont reload automatically. Refresh manually to see changes.
+
+## Project Structure
+```ts
+root
+└─ components                     // Folder for your React Components
+    └─ component
+    └─ App.tsx                    // Main component. 
+└─ deno-dir                       // Folder where all your Deno dependencies will be cached.
+    └─ deps
+└─ public                         // Contains the index function which will render the index.html plus styles page serverside.
+    └─ index.tsx
+└─ src                            // Source folder containing the static files.
+    └─ index.css
+    └─ index.js
+└─ deps.ts                        // Contains all the dependencies imported via url and then exported to be used in the project.
+└─ LICENSE
+└─ README.md
+└─ scripts.json                   // Contains arguments for Denon to run your Deno server.
+└─ server.ts                      // HTTP Server using Oak Middleware 
+
+```
 ## Credits
 - [Denon](https://deno.land/x/denon@2.4.8) by [Filippo Rossi](https://github.com/notfilippo) & [Elias Sjögreen](https://github.com/eliassjogreen)
 - [Guide to server-side rendering with Deno and React](https://www.sanity.io/guides/server-side-rendering-deno-react) by [Oluyemi Olususi](https://github.com/yemiwebby)

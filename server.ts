@@ -1,8 +1,9 @@
 import { Application, Router, send } from "./deps.ts";
 import indexPage from "./public/index.tsx";
-const app = new Application();
-const port = 8000;
 
+const app = new Application();
+
+const port = 8000;
 const router = new Router();
 
 router.get("/", (ctx) => {
