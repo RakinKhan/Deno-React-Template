@@ -36,21 +36,21 @@ denon start
 ## Project Structure
 ```ts
 root
-└─ components                     // Folder for your React Components
+└─ components                   // Folder for your React Components
     └─ component
-    └─ App.tsx                    // Main component. 
-└─ deno-dir                       // Folder where all your Deno dependencies will be cached.
+    └─ App.tsx                  // Main component. 
+└─ deno-dir                     // Folder where all your Deno dependencies will be cached.
     └─ deps
-└─ public                         // Contains the index function which will render the index.html plus styles page serverside.
+└─ public                       // Contains the index function which will render the index.html plus styles page serverside.
     └─ index.tsx
-└─ src                            // Source folder containing the static files.
+└─ src                          // Source folder containing the static files.
     └─ index.css
     └─ index.js
-└─ deps.ts                        // Contains all the dependencies imported via url and then exported to be used in the project.
+└─ deps.ts                      // Contains all the dependencies imported via url and then exported to be used in the project.
 └─ LICENSE
 └─ README.md
-└─ scripts.json                   // Contains arguments for Denon to run your Deno server.
-└─ server.ts                      // HTTP Server using Oak Middleware 
+└─ scripts.json                 // Contains arguments for Denon to run your Deno server.
+└─ server.ts                    // HTTP Server using Oak Middleware.
 
 ```
 ## Credits
